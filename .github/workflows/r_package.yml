@@ -174,10 +174,10 @@ jobs:
         with:
           environments: ${{ matrix.pixi-env }}
       - name: Install pandoc
-        uses: r-lib/actions/setup-pandoc@465b7d8e732ca3921382b1674c59bada9cbf3399  # v2.13.0
+        uses: r-lib/actions/setup-pandoc@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05  # v2.14.0
       - name: Install tinytex
         if: startsWith(matrix.os, 'windows')
-        uses: r-lib/actions/setup-tinytex@465b7d8e732ca3921382b1674c59bada9cbf3399  # v2.13.0
+        uses: r-lib/actions/setup-tinytex@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05  # v2.14.0
         env:
           CTAN_MIRROR: https://ctan.math.illinois.edu/systems/win32/miktex
           TINYTEX_INSTALLER: TinyTeX
@@ -306,7 +306,7 @@ jobs:
           persist-credentials: false
           submodules: true
       - name: Install pandoc
-        uses: r-lib/actions/setup-pandoc@465b7d8e732ca3921382b1674c59bada9cbf3399  # v2.13.0
+        uses: r-lib/actions/setup-pandoc@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05  # v2.14.0
       - name: Install system dependencies
         shell: bash
         run: |
